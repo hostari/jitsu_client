@@ -23,7 +23,7 @@ module Jitsu
       HTTP::Client.new(base_url).get(path)
     end
 
-    def post(path : String, body : Hash(String, V))
+    def post(path : String, body : Hash(String, String))
       HTTP::Client.new(base_url).post(path, headers: HTTP::Headers{"X-Auth-Token" => @token}, body: body.to_json)
     end
   end
