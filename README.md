@@ -1,6 +1,6 @@
 # jitsu_client
 
-TODO: Write a description here
+Crystal wrapper over Jitsu API
 
 ## Installation
 
@@ -20,15 +20,17 @@ TODO: Write a description here
 require "jitsu_client"
 ```
 
-TODO: Write usage instructions here
+```crystal
+client = Jitsu::Client.new
+client.set_host("https://jitsu.mycompany.com")
+client.set_token("my_auth_token_from_jitsu")
 
-## Development
-
-TODO: Write development instructions here
+Jitsu::Event.create({ data: { my_data: 1 } }.to_json, client: client)
+```
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/jitsu_client/fork>)
+1. Fork it (<https://github.com/hostari/jitsu_client/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +38,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [Xavi Ablaza](https://github.com/your-github-user) - creator and maintainer
+- [Xavi Ablaza](https://github.com/xaviablaza) - creator and maintainer
