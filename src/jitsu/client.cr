@@ -6,10 +6,12 @@ module Jitsu
     def initialize(@host : String = "", @token : String = "")
     end
 
+    # Sets the host for the client
     def set_host(host : String)
       @host = host
     end
 
+    # Set the auth token for the client
     def set_token(token : String)
       @token = token
     end
@@ -19,12 +21,15 @@ module Jitsu
       URI.parse(host)
     end
 
+    # Performs a GET request on the path
     def get(path : String)
       HTTP::Client.new(base_url).get(path)
     end
 
-    def post(path : String, body : Hash(String, String))
-      HTTP::Client.new(base_url).post(path, headers: HTTP::Headers{"X-Auth-Token" => @token}, body: body.to_json)
+    # Performs a POST request on the path with a body
+    def post(path : String, body : String)
+      HTTP::Client.new(base_url)
+        .post(path, headers: HTTP::Headers{"X-Auth-Token" => @token}, body: body)
     end
   end
 end
