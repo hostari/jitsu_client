@@ -9,7 +9,7 @@ Crystal wrapper over Jitsu API
    ```yaml
    dependencies:
      jitsu_client:
-       github: your-github-user/jitsu_client
+       github: hostari/jitsu_client
    ```
 
 2. Run `shards install`
