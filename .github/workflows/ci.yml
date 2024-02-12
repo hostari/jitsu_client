@@ -1,0 +1,21 @@
+# TODO: Uncomment when test suite is written
+# name: Crystal CI
+# on:
+#   pull_request:
+#     branches: [ "main" ]
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/setup-node@v4
+#         with:
+#           node-version: 20.x
+#       - uses: crystal-lang/install-crystal@v1
+#         with:
+#           crystal: 1.6.2
+#       - name: Download source
+#         uses: actions/checkout@v4
+#       - name: Install dependencies
+#         run: shards install
+#       - name: Run tests
+#         run: crystal spec
