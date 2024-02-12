@@ -1,6 +1,6 @@
 # jitsu_client
 
-Crystal wrapper over Jitsu API
+A crystal lang wrapper over the Jitsu API
 
 ## Installation
 
