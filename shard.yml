@@ -1,9 +1,9 @@
 name: jitsu_client
-version: 0.1.0
+version: 1.0.0
 
 authors:
   - Xavi Ablaza <25378966+xaviablaza@users.noreply.github.com>
 
-crystal: 1.4.1
+crystal: ~> 1.6.2
 
 license: MIT
